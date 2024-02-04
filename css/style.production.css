@@ -1,0 +1,255 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+a {
+    color: var(-- --primary-color);
+   }
+   body{
+       background-color: rgb(223, 228, 231);
+       color: rgb(10, 10, 10);
+       font-family: "Lora", serif;
+       font-size: 16px;
+       line-height: 1.6;
+       font-style: normals;
+   }
+   a{
+       font-size: 36px;
+   }
+   a:hover{
+       color: blue;
+       text-decoration: underline;
+   
+   }
+   a:visited {
+       color: cadetblue;
+   
+   }
+   a:active {
+       color: darkgreen;
+   
+   }
+   .button {
+       background-color: brown;
+       color: black;
+       font-size: 16px;
+       padding: 10px 20px;
+       -webkit-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+               transition-duration: 0.2s;
+       -webkit-transition-property: opacity;
+       -o-transition-property: opacity;
+       transition-property: opacity;
+       
+   }
+   button {
+       background-color: brown;
+       color: black;
+       font-size: 16px;
+       padding: 10px 20px;
+       -webkit-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+               transition-duration: 0.2s;
+       -webkit-transition-property: opacity;
+       -o-transition-property: opacity;
+       transition-property: opacity;
+       
+   }
+   .button:hover {
+       background-color: brown
+   }
+   button:hover {
+       background-color: brown
+   }
+   .button:active button:active{
+       background-color: --darkerColor;
+   }
+   .button:focus button:focus{
+       border: 10px solid rgb(128, 0, 11)
+   }
+   button:hover, 
+   button:focus .button:hover, 
+   .button:focus {
+   cursor: pointer;
+   opacity: 0.8;
+   }
+   .logo {
+    position: relative;
+    top: 20px;
+    left: 20px;
+   }
+   *{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+   }
+   .page-header {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       width: 100%;
+       padding: undefined;
+   }
+   .page-header_item{
+       -webkit-box-flex: 0;
+           -ms-flex: 0 1 200px;
+               flex: 0 1 200px;
+   }
+   .page-header_item:last-child {
+       -webkit-box-flex: 1;
+           -ms-flex-positive: 1;
+               flex-grow: 1;
+       text-align: right;
+   }
+   .navigation-list{
+       list-style-type: none;
+   }
+   .navigation-list li {
+       display: inline-block;
+       margin-left: 15px;
+   }
+   .profile_portrait {
+       float: left;
+       width: 250px;
+       margin-right: 40px;
+   }
+   .profile {
+       margin: auto;
+       width: 50%; 
+       text-align: center;
+   }
+   
+   .page-footer {
+       text-align: center;
+   }
+   .grid{
+       display: -ms-grid;
+       display: grid;
+       -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-gap: 20px;
+   }
+   .grid_item{
+       background-color: solid rgb(128, 0, 11);
+   }
+   @media screen and (max-width:500px) {
+     .grid {
+       -ms-grid-columns: 1fr;
+       grid-template-columns: 1fr;
+       grid-gap: 10px;
+    }
+     .grid_item:last-child {
+       grid-column: auto / auto;
+       grid-row: auto / auto;
+    }
+   h1{
+    font-size: 22px;   
+    }
+   }
+   
+   button {
+       border: none;
+       display:inline-block;
+       font-family: inherit;
+       background-color: --lightdefaultcolor;
+       color: rgb(223, 228, 231);
+       text-decoration: none;
+       padding: 10px;
+       border-radius: 3px;
+       border-bottom: 2px solid rgba(0,0,0,0.3);
+       -webkit-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+               transition-duration: 0.2s;
+       -webkit-transition-property: opacity;
+       -o-transition-property: opacity;
+       transition-property: opacity;
+   }
+       
+   button:hover ,
+   .button:focus {
+    cursor: pointer;
+    opacity : 0.8;
+   }
+   
+   @-webkit-keyframes color-change {
+       from {
+        fill: #edc655;
+   
+       }
+       to {
+        fill: #f76414;
+       }
+   }
+   
+   @keyframes color-change {
+       from {
+        fill: #edc655;
+   
+       }
+       to {
+        fill: #f76414;
+       }
+   }
+   .sun {
+     -webkit-animation-duration: 4s;
+             animation-duration: 4s;
+     -webkit-animation-name: color-change;
+             animation-name: color-change;
+     -webkit-animation-iteration-count: infinite;
+             animation-iteration-count: infinite;
+     -webkit-animation-direction: alternate;
+             animation-direction: alternate;
+     -webkit-animation-timing-function: linear;
+             animation-timing-function: linear;
+   
+   }
+   @-webkit-keyframes cloud-move {
+     from {
+       -webkit-transform: translate(0, 50px);
+               transform: translate(0, 50px);
+     }
+     to {
+       -webkit-transform: translate(200px, 50px);
+               transform: translate(200px, 50px);
+     }
+   }
+   @keyframes cloud-move {
+     from {
+       -webkit-transform: translate(0, 50px);
+               transform: translate(0, 50px);
+     }
+     to {
+       -webkit-transform: translate(200px, 50px);
+               transform: translate(200px, 50px);
+     }
+   }
+   .cloud-front {
+     -webkit-animation: 30s cloud-move infinite alternate linear;
+             animation: 30s cloud-move infinite alternate linear;
+   }
+   @-webkit-keyframes cloud-move-reverse {
+      from {
+        -webkit-transform: translate(446px, 48px);
+                transform: translate(446px, 48px);
+      }
+      to {
+        -webkit-transform: translate(100px, 48px);
+                transform: translate(100px, 48px);
+      }
+   }
+   @keyframes cloud-move-reverse {
+      from {
+        -webkit-transform: translate(446px, 48px);
+                transform: translate(446px, 48px);
+      }
+      to {
+        -webkit-transform: translate(100px, 48px);
+                transform: translate(100px, 48px);
+      }
+   }
+   .cloud-back {
+       -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+               animation: 34s cloud-move-reverse infinite alternate linear;
+   }

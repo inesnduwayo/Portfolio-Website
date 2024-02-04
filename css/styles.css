@@ -1,0 +1,208 @@
+ :root {
+ --primary-color: rgb(223, 228, 231);
+ --font-color: rgb(10, 10, 10);
+ --darkerColor: blue ;
+ --lighterFontcolor: cadetblue;
+ --defaultColor: darkgreen;
+ --darkerFontcolor: darkgoldenrod;
+ --darkblack: black;
+ --shadowcolor: brown;
+ --higlightborder: solid rgb(128, 0, 11);
+ --lightborder: lightgray;
+ --lightdefaultcolor: green;
+ --bordercolor:solid rgba(0,0,0,0.3);
+ --fillcolor: #edc655;
+ --fillFontcolor: #f76414;
+ --bodysize: 16px;
+ --bodylargersize: 36px;
+ --boxtopLeft: 20px;
+ --boxwidth: 100%;
+ --boxborder: 2px;
+ --boxpadding: 10px;
+ --boxflex: 200px;
+ --marginsize: 15px;
+ --largerwidth: 250px;
+ --rightsize: 40px;
+ --halfboxwidth: 50%;
+ --hsize: 22px;
+ --radiusSize: 3px;
+}
+a {
+ color: var(-- --primary-color);
+}
+body{
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    font-family: "Lora", serif;
+    font-size: var(--bodysize);
+    line-height: 1.6;
+    font-style: normals;
+}
+a{
+    font-size: var(--bodylargersize);
+}
+a:hover{
+    color: var(--darkerColor);
+    text-decoration: underline;
+
+}
+a:visited {
+    color: var(--lighterFontcolor);
+
+}
+a:active {
+    color: var(--defaultColor);
+
+}
+.button, 
+button {
+    background-color: var(--shadowcolor);
+    color: var(--darkblack);
+    font-size: var(--bodysize);
+    padding: 10px var(--boxtopLeft);
+    transition-duration: 0.2s;
+    transition-property: opacity;
+    
+}
+.button:hover, 
+button:hover {
+    background-color: var(--shadowcolor)
+}
+.button:active button:active{
+    background-color: --darkerColor;
+}
+.button:focus button:focus{
+    border: var(--boxpadding) var(--higlightborder)
+}
+button:hover, 
+button:focus .button:hover, 
+.button:focus {
+cursor: pointer;
+opacity: 0.8;
+}
+.logo {
+ position: relative;
+ top: var(--boxtopLeft);
+ left: var(--boxtopLeft);
+}
+*{
+ box-sizing: border-box;
+}
+.page-header {
+    display: flex;
+    width: var(--boxwidth);
+    padding: var(----boxtopLeft);
+}
+.page-header_item{
+    flex: 0 1 var(--boxflex);
+}
+.page-header_item:last-child {
+    flex-grow: 1;
+    text-align: right;
+}
+.navigation-list{
+    list-style-type: none;
+}
+.navigation-list li {
+    display: inline-block;
+    margin-left: var(--marginsize);
+}
+.profile_portrait {
+    float: left;
+    width: var(--largerwidth);
+    margin-right: var(--rightsize);
+}
+.profile {
+    margin: auto;
+    width: var(--halfboxwidth); 
+    text-align: center;
+}
+
+.page-footer {
+    text-align: center;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: var(--boxtopLeft);
+}
+.grid_item{
+    background-color: var(--higlightborder);
+}
+@media screen and (max-width:500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: var(--boxpadding);
+ }
+  .grid_item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+ }
+h1{
+ font-size: var(--hsize);   
+ }
+}
+
+button {
+    border: none;
+    display:inline-block;
+    font-family: inherit;
+    background-color: --lightdefaultcolor;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: var(--boxpadding);
+    border-radius: 3px;
+    border-bottom: 2px var(--bordercolor);
+    transition-duration: 0.2s;
+    transition-property: opacity;
+}
+    
+button:hover ,
+.button:focus {
+ cursor: pointer;
+ opacity : 0.8;
+}
+
+@keyframes color-change {
+    from {
+     fill: var(--fillcolor);
+
+    }
+    to {
+     fill: var(--fillFontcolor);
+    }
+}
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+
+}
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+@keyframes cloud-move-reverse {
+   from {
+     transform: translate(446px, 48px);
+   }
+   to {
+     transform: translate(100px, 48px);
+   }
+}
+.cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+
+
+
