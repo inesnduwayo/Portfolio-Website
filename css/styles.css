@@ -26,6 +26,7 @@
  --halfboxwidth: 50%;
  --hsize: 22px;
  --radiusSize: 3px;
+ --smallerwidth: 0px;
 }
 a {
  color: var(-- --primary-color);
@@ -81,9 +82,10 @@ cursor: pointer;
 opacity: 0.8;
 }
 .logo {
- position: relative;
- top: var(--boxtopLeft);
- left: var(--boxtopLeft);
+ position: fixed;
+ height: auto;
+ left: var(--smallerwidth);
+ width: var(--largerwidth);
 }
 *{
  box-sizing: border-box;

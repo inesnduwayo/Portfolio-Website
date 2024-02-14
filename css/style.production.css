@@ -77,9 +77,10 @@ a {
    opacity: 0.8;
    }
    .logo {
-    position: relative;
-    top: 20px;
-    left: 20px;
+    position: fixed;
+    height: auto;
+    left: 0px;
+    width: 250px;
    }
    *{
     -webkit-box-sizing: border-box;
