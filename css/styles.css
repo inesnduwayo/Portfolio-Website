@@ -27,6 +27,19 @@
  --hsize: 22px;
  --radiusSize: 3px;
  --smallerwidth: 0px;
+ --heightsize:1.6;
+ --transitiontime: 0.2s;
+ --opacitysize:0.8;
+ --flexsize:1;
+ --animationtime: 4s;
+ --transformsize: 0, 50 px;
+ --translatesize: 200px, 50px;
+ --keyframesize: 446px, 48px;
+ --cloudsize: 100px, 48px;
+ --templatesize: 1fr 1fr 1fr;
+ --gridsize: 1fr;
+
+
 }
 a {
  color: var(-- --primary-color);
@@ -36,10 +49,10 @@ body{
     color: var(--font-color);
     font-family: "Lora", serif;
     font-size: var(--bodysize);
-    line-height: 1.6;
+    line-height: var(--heightsize);
     font-style: normals;
 }
-a{
+a {
     font-size: var(--bodylargersize);
 }
 a:hover{
@@ -60,8 +73,8 @@ button {
     background-color: var(--shadowcolor);
     color: var(--darkblack);
     font-size: var(--bodysize);
-    padding: 10px var(--boxtopLeft);
-    transition-duration: 0.2s;
+    padding: var(--boxpadding) var(--boxtopLeft);
+    transition-duration: var(--transitiontime);
     transition-property: opacity;
     
 }
@@ -79,7 +92,7 @@ button:hover,
 button:focus .button:hover, 
 .button:focus {
 cursor: pointer;
-opacity: 0.8;
+opacity: var(--opacitysize);
 }
 .logo {
  position: relative;
@@ -99,7 +112,7 @@ opacity: 0.8;
     flex: 0 1 var(--boxflex);
 }
 .page-header_item:last-child {
-    flex-grow: 1;
+    flex-grow: var(--flexsize);
     text-align: right;
 }
 .navigation-list{
@@ -125,7 +138,7 @@ opacity: 0.8;
 }
 .grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: var(--templatesize);
     grid-gap: var(--boxtopLeft);
 }
 .grid_item{
@@ -133,7 +146,7 @@ opacity: 0.8;
 }
 @media screen and (max-width:500px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: var(--gridsize);
     grid-gap: var(--boxpadding);
  }
   .grid_item:last-child {
@@ -153,16 +166,16 @@ button {
     color: var(--primary-color);
     text-decoration: none;
     padding: var(--boxpadding);
-    border-radius: 3px;
-    border-bottom: 2px var(--bordercolor);
-    transition-duration: 0.2s;
+    border-radius: var(--radiusSize);
+    border-bottom: var(--boxborder) var(--bordercolor);
+    transition-duration: var(--transitiontime);
     transition-property: opacity;
 }
     
 button:hover ,
 .button:focus {
  cursor: pointer;
- opacity : 0.8;
+ opacity : var(--opacitysize);
 }
 
 @keyframes color-change {
@@ -175,7 +188,7 @@ button:hover ,
     }
 }
 .sun {
-  animation-duration: 4s;
+  animation-duration: var(--animationtime);
   animation-name: color-change;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -184,10 +197,10 @@ button:hover ,
 }
 @keyframes cloud-move {
   from {
-    transform: translate(0, 50px);
+    transform: translate var(--transformsize);
   }
   to {
-    transform: translate(200px, 50px);
+    transform: translate var(--translatesize);
   }
 }
 .cloud-front {
@@ -195,10 +208,10 @@ button:hover ,
 }
 @keyframes cloud-move-reverse {
    from {
-     transform: translate(446px, 48px);
+     transform: translate var(--keyframesize);
    }
    to {
-     transform: translate(100px, 48px);
+     transform: translate var(--cloudsize);
    }
 }
 .cloud-back {
